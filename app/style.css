@@ -1,0 +1,32 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #282249;
+  background: #f6f2ff;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100svh; background: radial-gradient(ellipse at top, #fff0da, transparent 65%); }
+main { width: min(100%, 30rem); margin: auto; padding: clamp(2rem, 9vh, 5rem) 1.25rem 2rem; text-align: center; }
+h1 { font-size: clamp(2.1rem, 9vw, 3.3rem); letter-spacing: -.06em; line-height: 1.12; margin: .4rem 0 1rem; }
+h2 { margin: 0 0 .5rem; font-size: 1.4rem; }
+p { line-height: 1.6; margin: 0; }
+.eyebrow { font-size: .88rem; letter-spacing: .14em; font-weight: 700; color: #60518e; }
+button, .primary { font: inherit; cursor: pointer; touch-action: manipulation; }
+.die { display: grid; justify-items: center; gap: 1rem; margin: 1.8rem auto 1rem; padding: .6rem 1rem; border: 0; background: transparent; color: #44307c; font-size: 1.2rem; font-weight: 750; }
+.face { display: grid; grid-template: repeat(3, 1fr) / repeat(3, 1fr); place-items: center; width: 8rem; aspect-ratio: 1; padding: .9rem; border-radius: 1.6rem; background: #6042bd; box-shadow: 0 .42rem 0 #392479, 0 .75rem 1.4rem #6042bd40; transform: rotate(-9deg); transition: transform .18s; }
+.die:active .face { transform: rotate(9deg) scale(.93); }
+.face i { width: .95rem; aspect-ratio: 1; background: #fff2ca; border-radius: 50%; }
+.face i:nth-child(2) { grid-area: 1 / 3; }
+.face i:nth-child(3) { grid-area: 2 / 2; }
+.face i:nth-child(4) { grid-area: 3 / 1; }
+.face i:nth-child(5) { grid-area: 3 / 3; }
+.card { border: 1px solid #ddd1ff; border-radius: 1.25rem; padding: 1.3rem; margin: 1.2rem 0 .4rem; background: #fff; overflow-wrap: anywhere; }
+.primary { display: inline-block; margin-top: 1.2rem; padding: .8rem 1.2rem; color: white; background: #5033a3; border-radius: 2rem; text-decoration: none; }
+.quiet { min-height: 44px; border: 0; background: transparent; color: #5033a3; padding: .6rem; text-decoration: underline; }
+.share { display: grid; justify-items: center; }
+.share label, .share input { display: block; width: 100%; }
+.share input { padding: .5rem; margin-top: .4rem; font: inherit; }
+a { color: #5033a3; }
+footer { margin-top: 1.35rem; color: #605976; font-size: .88rem; }
+:focus-visible { outline: 3px solid #49358c; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { .face { transition: none; } }

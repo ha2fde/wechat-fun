@@ -1,0 +1,26 @@
+{
+  "name": "wechat-fun",
+  "version": "0.1.0",
+  "scripts": {
+    "test": "node --test scripts/acceptance.test.mjs",
+    "dev": "next dev",
+    "build": "next build",
+    "typecheck": "next typegen && tsc --noEmit"
+  },
+  "type": "module",
+  "dependencies": {
+    "next": "16.4.5",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "7.0.2"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "private": true
+}
